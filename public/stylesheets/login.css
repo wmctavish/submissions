@@ -1,0 +1,49 @@
+body {
+    background-image: url("JJBackground2finer.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(23,32,45);
+    margin: 0px;
+}
+
+.flex-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    margin-top: 45px;
+
+}
+
+
+.login-entry {
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+}
+
+button {
+    margin: 10px;
+    background-color: rgb(206, 84, 68);
+    color: black;
+    font-family: "Oswald", sans-serif;
+    border: 0px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: rgb(206, 84, 68);
+}
+
+input {
+    text-align: center;
+}

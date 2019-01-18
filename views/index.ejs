@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submissions: BJJ Training Journal</title>
+  <link href="/stylesheets/main.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+
+<div class="flex-page">
+
+<div class="nav-container">
+
+  <div class="pages-container">
+      <a href="entries">Journal</a>
+      <p style="margin: 0px">|</p>
+      <a href="goals">Goals</a>
+  </div>
+
+  <div class="account-container">
+     <a href="signout">Sign Out</a>
+  </div>
+
+</div>
+
+
+
+<div class="heading">
+
+  <img src="/stylesheets/headerCUTS.png">
+
+  <!-- <h1>BJJ Training Journal</h1> -->
+</div>
+
+<div class="container">
+  <div class="container-1">
+  <ul class="entries">
+  <h2 class="latest-entries">Latest Entries</h2>
+  <% for(var i=0; i<entries.length; i++) {%>
+    <li class="each-entries" id="<%=entries[i]._id %>">
+      <span class="date"><%= entries[i].date %></span><br>
+      <span class="note"><%= entries[i].note %></span><br>
+      <a class="delete-button">Delete</a>
+      <a class="edit-button">Edit</a><br>
+    </li>
+  <% } %>
+  </ul>
+  </div>
+
+
+  <div class="container-2">
+  <form class="form-fields" action="/entries" method="POST">
+    <h2 class="new-entry">New Entry</h2>
+    <input type="hidden" name="date" value="<%= new Date();%>">
+    <textarea class="note-input" rows="10" cols="70" placeholder="Notes" name="note"></textarea><br>
+    <button class="entry-submit-button" id="updater" type="submit">Submit</button>
+  </form>
+
+
+    <h2 class="current-goals">Current Goals</h2>
+    <div class="current-goals-list">
+        <% for(var i=0; i<frontPageGoals.length; i++) {%>
+        <li class="goal"><%= frontPageGoals[i].goal %></li><br>
+        </li>
+        <% } %>
+    </div>
+
+  </div>
+</div>
+
+</div>
+  <script src="main.js"></script>
+
+</body>
+</html>

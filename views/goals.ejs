@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submissions: BJJ Training Journal</title>
+  <link href="/stylesheets/goals.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+
+<div class="nav-container">
+
+  <div class="pages-container">
+      <a href="entries">Journal</a>
+      <p style="margin: 0px">|</p>
+      <a href="goals">Goals</a>
+  </div>
+
+  <div class="account-container">
+     <a href="signout">Sign Out</a>
+  </div>
+
+
+</div>
+
+
+<div class="heading">
+  <img src="/stylesheets/headerCUTS.png">
+</div>
+
+
+
+<div class="body-container">
+  <div class="container-1">
+
+    <form class="form-fields" action="/goals" method="POST">
+      <h2 class="new-goal">New Goal</h2><br>
+      <input type="hidden" name="date" value="<%=new Date();%>">
+      <textarea class="note-input" rows="4" cols="70" placeholder="Goal" name="goal"></textarea><br>
+      <button class="goal-submit-button" id="updater" type="submit">Submit</button>
+    </form>
+
+    <div class="goals-list">
+    <% for(var i=0; i<goals.length; i++) {%>
+      <li class="goal" id="<%= goals[i]._id %>"><%= goals[i].goal %><button class="did-it">DID IT!</button></li><br>
+    <% } %>
+    </div>
+  </div>
+
+  <div class="container-2">
+
+    <h2 class="new-goal">Completed Goals</h2>
+
+    <div class="accomplishments">
+      <% for(var i=0; i<accomplishments.length; i++) {%>
+      <li class="accomplishment"><%= accomplishments[i].accomplishment %></li><br>
+    </li>
+    <% } %>
+    </div>
+
+  </div>
+
+</div>
+
+    <script src="goals.js"></script>
+
+</body>
+</html>
