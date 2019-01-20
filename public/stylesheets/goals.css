@@ -7,6 +7,13 @@ body {
     margin: 0px;
 }
 
+.flex-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    }
+
 .heading {
     margin-top: 25px;
     margin-bottom: 20px;
@@ -17,7 +24,7 @@ body {
 
 
 .nav-container {
-    display: flex;
+    //display: flex;
     background-color: rgba(120,120,120,0.7);
     border-bottom: 1px solid black;
     font-size: 20px;
@@ -27,6 +34,7 @@ body {
 
 .pages-container {
     display: flex;
+    float: left;
 }
 
 .pages-container a, .pages-container p {
@@ -37,6 +45,13 @@ body {
 
 .pages-container a:hover {
     color: rgb(206, 84, 68);
+}
+
+
+.account-container {
+    float: right;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 .account-container a {
@@ -54,6 +69,7 @@ body {
     margin-left: 10%;
     justify-content: center;
     animation: fadeIn 1s;
+    overflow: auto;
 }
 
 @keyframes fadeIn {
