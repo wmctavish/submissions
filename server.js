@@ -19,7 +19,7 @@ app.use(session({
 // Just as it looks: sets the view engine to recognize .ejs files for the purpose of dynamic HTML delivery.
 app.set('view engine', 'ejs')
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 var db;
 
 /* The main connection to mLab, where the database is hosted. 'db' becomes the go-to database object, typically in the form of
