@@ -89,6 +89,14 @@ app.get('/accomplishments', (req,res) => {
     })
 });
 
+app.get('/library', (req,res) => {
+    if (req.session.password) {
+      res.render('library');
+      } else {
+        res.redirect('/')
+      };
+});
+
 app.get('/signout', (req,res) => {
   if (req.session.password) {
     req.session.destroy((err) => {
