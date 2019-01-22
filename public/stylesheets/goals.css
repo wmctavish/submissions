@@ -1,0 +1,147 @@
+body {
+    background-image: url("JJBackground2finer.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(23,32,45);
+    margin: 0px;
+}
+
+.flex-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    }
+
+.heading {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: rgb(206, 84, 68);
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.nav-container {
+    //display: flex;
+    background-color: rgba(120,120,120,0.7);
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    padding: 5px 50px 5px;
+    justify-content: space-between;
+}
+
+.pages-container {
+    display: flex;
+    float: left;
+}
+
+.pages-container a, .pages-container p {
+    color: white;
+    text-decoration: none;
+    padding-right: 15px;
+}
+
+.pages-container a:hover {
+    color: rgb(206, 84, 68);
+}
+
+
+.account-container {
+    float: right;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.account-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.account-container a:hover {
+    color: rgb(206, 84, 68);
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1s;
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.container-1 {
+    margin-right: 10%;
+}
+
+
+.container-2 {
+    margin-left: 10%;
+}
+
+
+.new-goal {
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(206, 84, 68);
+    font-size: 35px;
+}
+
+.goal {
+   color: white;
+   font-size: 20px;
+   white-space: pre-wrap;
+}
+
+.goals-list {
+    background-color: rgba(120,120,120,0.6);
+    border: solid 1px black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    list-style-position: inside;
+    margin: 12px 10px auto auto;
+    padding: 8px;
+}
+
+.goal-submit-button, .did-it {
+    background-color: rgb(206, 84, 68);
+    color: black;
+    font-family: "Oswald", sans-serif;
+    border: 0px solid black;
+    border-radius: 5px;
+}
+
+.goal-submit-button:hover, .did-it:hover {
+    cursor: pointer;
+    background-color: black;
+    color: rgb(206, 84, 68);
+}
+
+.did-it {
+    float: right;
+    margin-top: 4px;
+}
+
+.accomplishments {
+    background-color: rgba(120,120,120,0.6);
+    border: solid 1px black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    text-align: center;
+    list-style: none;
+    margin: 12px 10px auto auto;
+    padding: 8px;
+}
+
+.accomplishment {
+    border: 2px solid rgb(206, 84, 68);
+    margin: 10px;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    white-space: pre-wrap;
+}
